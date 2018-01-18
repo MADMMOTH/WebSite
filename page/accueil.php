@@ -1,5 +1,5 @@
 <body>
 	<main>
-		<p>accueil</p>
+		<p>Home Page</p>
 	</main>
 </body>
