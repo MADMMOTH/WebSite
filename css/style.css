@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+
+body {
+	background: #FFFEFF;
+	font-family:arial, sans-serif;
+	margin: 0px;
+	min-width: 1280px;
+}
+
+main{
+	/* 250px = height -> 180px Header + 70px Footer*/
+	min-height: calc(100vh - 250px);
+	display: block;
+}
