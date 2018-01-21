@@ -12,4 +12,11 @@ function fconnectBD(){
 	return $PDO;
 }
 
+$db = fconnectBD();
+
+function db(){	
+	global $db;
+	return $db;
+}
+
 ?>

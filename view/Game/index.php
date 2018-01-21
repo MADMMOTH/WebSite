@@ -1,5 +1,5 @@
 <body>
 	<main>
-		<p>news</p>
+		<h1>Games</h1>
 	</main>
 </body>
