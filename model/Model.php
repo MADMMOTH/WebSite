@@ -7,10 +7,10 @@ class Model {
 		$table = strtolower($class);
 		$table_id = substr(strtolower($class),0,3)."_id";
 		if ($id == null) {
-			$st = db()->prepare("insert into $table default values returning $table_id");
+			echo "ok";
+			$st = db()->prepare("insert into $table values()");
 			$st->execute();
-			$row = $st->fetch();
-			$this->$table_id = $row[$table_id];
+			$this->$table_id = db()->lastInsertId();
 		} else {
 			$st = db()->prepare("select * from $table where $table_id=:id");
 			$st->bindValue(":id", $id);
@@ -42,11 +42,11 @@ class Model {
 	}
 	
 	/*recupere un objet dans la base par foreign key*/
-	public static function findByFKey ($link,$id) {
+	public static function findByFKey ($fTable,$id) {
 		$class = get_called_class();
 		$table = strtolower($class);
 		$table_id = substr(strtolower($class),0,3)."_id";
-		$fkname= $link."_id";
+		$fkname= substr(strtolower($fTable),0,3)."_id";
 		$st = db()->prepare("select $table_id from $table where $fkname =:id");
 		$st->bindValue(":id", $id);
 		$st->execute();

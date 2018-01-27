@@ -1,8 +1,11 @@
 <header>
-	<ul>
-		<li><a href= 'index.php'>HOME</a></li>
-		<li><a href= 'index.php?c=Game'>GAMES</a></li>
-		<li><a href= 'index.php?c=News'>NEWS</a></li>
-		<li><a href= 'index.php?c=Community'>COMMUNITY</a></li>
-	</ul>
+	<h1>MADMMOTH STUDIOS</h1>
+	<nav>
+		<a href= '?c=Home'>HOME</a>
+		<a href= '?c=Game'>GAMES</a>
+		<a href= '?c=News'>NEWS</a>
+		<a href= '?c=Community'>COMMUNITY</a>
+	</nav>
 </header>
+<div id="headerSpace"></div>
+<div id="Page">

@@ -1,14 +1,69 @@
 @CHARSET "UTF-8";
 
-body {
-	background: #FFFEFF;
-	font-family:arial, sans-serif;
-	margin: 0px;
-	min-width: 1280px;
+*{
+	display: flex;
+	flex-direction: column;
 }
 
-main{
-	/* 250px = height -> 180px Header + 70px Footer*/
-	min-height: calc(100vh - 250px);
-	display: block;
+body {
+	margin: 0px;
+}
+
+header , #headerSpace{
+	height: 6em;
+}
+
+header{
+	/*position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;*/
+	align-items: center;
+	border-style: solid;
+	background-color: #212121;
+	border-width: 0 0 3px 0;
+	border-color: black;
+}
+
+header h1{
+	text-align: center;
+}
+
+nav{
+	width: 50%;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#Page{
+
+}
+
+footer {
+	height: 2em;
+	background-color: #212121;
+    position: fixed;
+    bottom: : 0;
+	right: 0;
+	left: 0;
+    bottom: 0;
+    border-style: solid;
+    border-width: 3px 0 0 0;
+	border-color: #484848;
+	justify-content: space-around;
+}
+
+footer p{
+	margin: 0;
+}
+
+.news{
+	background-color: #212121;
+	margin: 1em;
+}
+
+.game{
+	background-color: red;
+	height: 60vh;
+	width: 42.72vh;
 }

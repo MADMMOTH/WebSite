@@ -24,7 +24,7 @@ function parameters() {
 if (isset(parameters()["c"])) {
 	$controllerName = parameters()["c"]."Controller";
 	$controller = new $controllerName();
-	$action = "index";
+		$action = "index";
 	if(isset(parameters()["a"])){
 		$action = parameters()["a"];
 	}
