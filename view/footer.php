@@ -1,6 +1,7 @@
 		</div>
+		</div id="footerSpace">
 		<footer>
-		<p>© 2018 MADMMOTH STUDIOS. ALL RIGHTS RESERVED.</p>
+		<h2>© 2018 MADMMOTH STUDIOS. ALL RIGHTS RESERVED.</h2>
 		</footer>
 	</main>
 </body>

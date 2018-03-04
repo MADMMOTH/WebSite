@@ -21,18 +21,32 @@ function parameters() {
 }
 
 // Gestion des la route : paramètre c = controller & a = action
-if (isset(parameters()["c"])) {
-	$controllerName = parameters()["c"]."Controller";
-	$controller = new $controllerName();
-		$action = "index";
-	if(isset(parameters()["a"])){
-		$action = parameters()["a"];
+try{
+	if (isset(parameters()["c"])) {
+		$controllerName = ucfirst(parameters()["c"])."Controller";
+		if(class_exists($controllerName)){
+			$controller = new $controllerName();
+			$action = "index";
+			if(isset(parameters()["a"])){
+				$action = parameters()["a"];
+			}
+			if(method_exists($controller, $action)){
+				$controller->$action();
+			}else{
+				throw new Exception($action." method do not defined in ".$controllerName);	
+			}
+		}
+		else{
+			throw new Exception($controllerName." do not exist");	
+		}
+		
+	} else {
+		$c = new HomeController();
+		$c->index();
 	}
-	$controller->$action();
-} else {
-	$c = new HomeController();
-	$c->index();
+}catch(Exception $e){
+	$c = new ErrorController();
+	$c->index($e);
 }
-
 
 ?>

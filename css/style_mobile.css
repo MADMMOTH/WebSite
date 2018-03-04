@@ -1,0 +1,82 @@
+@media (max-width: 640px) {
+	
+	*{
+		font-size: 4vw;
+	}
+
+	nav , #headerSpace{
+	height: 8vw;
+	}
+
+	#logo,nav #center{
+		display: none;
+	}
+
+	nav a{
+		font-size: 6vw;
+		width: 23.5vw;
+	}
+
+	
+	h1:not(#mainTitle){
+		margin-top: -3vw;
+		font-size: 6vw;
+	}
+
+	h2,h3,h4,h5,h6,.title{
+		font-size: 5vw;
+	}
+
+	#Page{
+		width: 100%;
+	}
+
+	.news{
+		width: 90vw;
+		height: 40vw;
+	}
+
+	#lastnews{
+		width: 90vw;
+		height: 40vw;
+	}
+
+	.news h2 {
+		font-size: 5vw;
+	}
+
+	.news .date{
+		font-size:4vw;
+	}
+
+	.news .type{
+		font-size:5vw;
+		width: 20vw;
+		margin: 2vw -0.3vw;
+		color: black;
+		box-shadow: 2px 3px 3px rgba(0,0,0,1);
+	}
+	
+	.content,#aboutus{
+		width: 90%;
+	}
+
+	.game h2{
+		z-index: 1;
+		color:white;
+		width: 42.72vh;
+		background-color: rgba(0,0,0,0.8);
+	}
+
+	iframe, #travolta{
+		height: 45vw;
+	}
+
+	footer{
+		height: 5vw;
+	}
+
+	footer h2{
+		font-size: 3vw;
+	}
+}
